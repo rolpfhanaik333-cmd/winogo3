@@ -1,0 +1,401 @@
+<<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Winogo3 Prediction</title>
+
+<style>
+body {
+  margin: 0;
+  font-family: Arial;
+  background: #0f172a;
+  color: white;
+  text-align: center;
+}
+
+.header {
+  background: linear-gradient(90deg,#ff4d4d,#ff7a7a);
+  padding: 15px;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.card {
+  margin: 20px;
+  padding: 20px;
+  border-radius: 15px;
+  background: #1e293b;
+  box-shadow: 0 0 15px rgba(0,255,255,0.2);
+}
+
+.result {
+  font-size: 40px;
+  margin: 20px 0;
+}
+
+.btn {
+  padding: 15px 30px;
+  background: cyan;
+  border: none;
+  border-radius: 10px;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.history {
+  margin-top: 20px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="header">Winogo3 Prediction Tool</div>
+
+<div class="card">
+  <h2>Live Prediction</h2>
+  <div class="result" id="result">--</div>
+  <button class="btn" onclick="predict()">NEXT STEP</button>
+</div>
+
+<div class="card">
+  <h3>History</h3>
+  <div class="history" id="history"></div>
+</div>
+
+<script>
+let historyList = [];
+
+function predict() {
+  let options = ["BIG", "SMALL"];
+  let result = options[Math.floor(Math.random() * options.length)];
+
+  document.getElementById("result").innerText = result;
+
+  historyList.unshift(result);
+  if (historyList.length > 10) historyList.pop();
+
+  document.getElementById("history").innerHTML = historyList.join(" | ");
+}
+</script>
+
+</body>
+</html>>
+	<!--Tab to edit-->
+</<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Winogo3 Prediction</title>
+
+<style>
+body {
+  margin: 0;
+  font-family: Arial;
+  background: #0f172a;
+  color: white;
+  text-align: center;
+}
+
+.header {
+  background: linear-gradient(90deg,#ff4d4d,#ff7a7a);
+  padding: 15px;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.card {
+  margin: 20px;
+  padding: 20px;
+  border-radius: 15px;
+  background: #1e293b;
+  box-shadow: 0 0 15px rgba(0,255,255,0.2);
+}
+
+.result {
+  font-size: 40px;
+  margin: 20px 0;
+}
+
+.btn {
+  padding: 15px 30px;
+  background: cyan;
+  border: none;
+  border-radius: 10px;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.history {
+  margin-top: 20px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="header">Winogo3 Prediction Tool</div>
+
+<div class="card">
+  <h2>Live Prediction</h2>
+  <div class="result" id="result">--</div>
+  <button class="btn" onclick="predict()">NEXT STEP</button>
+</div>
+
+<div class="card">
+  <h3>History</h3>
+  <div class="history" id="history"></div>
+</div>
+
+<script>
+let historyList = [];
+
+function predict() {
+  let options = ["BIG", "SMALL"];
+  let result = options[Math.floor(Math.random() * options.length)];
+
+  document.getElementById("result").innerText = result;
+
+  historyList.unshift(result);
+  if (historyList.length > 10) historyList.pop();
+
+  document.getElementById("history").innerHTML = historyList.join(" | ");
+}
+</script>
+
+</body>
+</html>><!DOCTYPE html>
+<html>
+<head>
+<title>Winogo3 Pro</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+body{
+  margin:0;
+  font-family:Arial;
+  background:#0f172a;
+  color:white;
+  text-align:center;
+}
+
+.header{
+  background:linear-gradient(90deg,#ff4d4d,#ff7a7a);
+  padding:15px;
+  font-size:22px;
+  font-weight:bold;
+}
+
+.balance{
+  margin:10px;
+  font-size:18px;
+  color:yellow;
+}
+
+.card{
+  background:#1e293b;
+  margin:15px;
+  padding:20px;
+  border-radius:15px;
+  box-shadow:0 0 10px cyan;
+}
+
+.result{
+  font-size:40px;
+  margin:10px;
+}
+
+.color{
+  font-size:25px;
+  margin:10px;
+}
+
+.timer{
+  font-size:25px;
+  color:orange;
+}
+
+.history{
+  margin-top:10px;
+  font-size:14px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="header">🔥 Winogo3 Pro Prediction</div>
+
+<div class="balance">Balance: ₹1000</div>
+
+<div class="card">
+<h2>Live Result</h2>
+<div class="result" id="res">--</div>
+<div class="color" id="color">--</div>
+<div class="timer" id="time">30</div>
+</div>
+
+<div class="card">
+<h3>History</h3>
+<div class="history" id="history"></div>
+</div>
+
+<script>
+
+let t = 30;
+let historyList = [];
+
+function getResult(){
+  let bigsmall = Math.random()<0.5 ? "BIG" : "SMALL";
+
+  let colors = ["RED","GREEN","VIOLET"];
+  let color = colors[Math.floor(Math.random()*3)];
+
+  return {bigsmall, color};
+}
+
+function update(){
+  let r = getResult();
+
+  document.getElementById("res").innerText = r.bigsmall;
+  document.getElementById("color").innerText = r.color;
+
+  historyList.unshift(r.bigsmall+"-"+r.color);
+  if(historyList.length>10) historyList.pop();
+
+  document.getElementById("history").innerText = historyList.join(" | ");
+}
+
+setInterval(()=>{
+  t--;
+  document.getElementById("time").innerText = t;
+
+  if(t==0){
+    update();
+    t=30;
+  }
+
+},1000);
+
+</script>
+
+</body>
+</html><!DOCTYPE html>
+<html>
+
+<head>
+	<title>Winogo3 Pro</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+	<style>
+		body {
+			margin: 0;
+			font-family: Arial;
+			background: #0f172a;
+			color: white;
+			text-align: center;
+		}
+		
+		.header {
+			background: linear-gradient(90deg, #ff4d4d, #ff7a7a);
+			padding: 15px;
+			font-size: 22px;
+			font-weight: bold;
+		}
+		
+		.balance {
+			margin: 10px;
+			font-size: 18px;
+			color: yellow;
+		}
+		
+		.card {
+			background: #1e293b;
+			margin: 15px;
+			padding: 20px;
+			border-radius: 15px;
+			box-shadow: 0 0 10px cyan;
+		}
+		
+		.result {
+			font-size: 40px;
+			margin: 10px;
+		}
+		
+		.color {
+			font-size: 25px;
+			margin: 10px;
+		}
+		
+		.timer {
+			font-size: 25px;
+			color: orange;
+		}
+		
+		.history {
+			margin-top: 10px;
+			font-size: 14px;
+		}
+	</style>
+</head>
+
+<body>
+	
+	<div class="header">🔥 Winogo3 Pro Prediction</div>
+	
+	<div class="balance">Balance: ₹1000</div>
+	
+	<div class="card">
+		<h2>Live Result</h2>
+		<div class="result" id="res">--</div>
+		<div class="color" id="color">--</div>
+		<div class="timer" id="time">30</div>
+	</div>
+	
+	<div class="card">
+		<h3>History</h3>
+		<div class="history" id="history"></div>
+	</div>
+	
+	<script>
+		let t = 30;
+		let historyList = [];
+		
+		function getResult() {
+			let bigsmall = Math.random() < 0.5 ? "BIG" : "SMALL";
+			
+			let colors = ["RED", "GREEN", "VIOLET"];
+			let color = colors[Math.floor(Math.random() * 3)];
+			
+			return { bigsmall, color };
+		}
+		
+		function update() {
+			let r = getResult();
+			
+			document.getElementById("res").innerText = r.bigsmall;
+			document.getElementById("color").innerText = r.color;
+			
+			historyList.unshift(r.bigsmall + "-" + r.color);
+			if (historyList.length > 10) historyList.pop();
+			
+			document.getElementById("history").innerText = historyList.join(" | ");
+		}
+		
+		setInterval(() => {
+			t--;
+			document.getElementById("time").innerText = t;
+			
+			if (t == 0) {
+				update();
+				t = 30;
+			}
+			
+		}, 100);
+	</script>
+	
+</body>
+
+</html>
